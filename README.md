@@ -29,6 +29,12 @@ Gerar o projeto:
 
 Esse comando vai criar uma pasta com o nome Projeto no diretório corrente e criar os arquivos padrões. Projeto gerado em português por default.
 
+Para gerar em inglês, por exemplo, utilize:
+
+```
+  cs-webautomator new Projeto --lang=en
+```
+
 **Os comandos generate só funcionam dentro da raiz do projeto**.
 
 ####Features
