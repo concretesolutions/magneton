@@ -1,0 +1,7 @@
+en:
+  first_scenario: "First Scenario"
+  comments:
+    insert_steps: "Insert steps"
+    elements: "Declare all the elements of this screen"
+    actions: "Declare all actions of this screen"
+  

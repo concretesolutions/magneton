@@ -1,0 +1,140 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require 'thor/group'
+require 'i18n'
+require 'gherkin' # Used here as a translation source
+require 'json'
+require 'yaml'
+
+require File.join(File.dirname(__FILE__), 'cs-webautomator-helpers')
+require_relative '../lib/cs/webautomator/version'
+
+module CS
+  module WEBAUTOMATOR
+    # Definition of all gem generators
+    class Generate < Thor
+      include Thor::Actions
+
+      desc 'feature [RESOURCE_NAME]', 'Generates a feature'
+      option :lang,
+             banner: 'any of the gherkin supported languages',
+             default: :en
+      def feature(name)
+        I18n.config.default_locale = options[:lang]
+        in_root_project_folder?
+
+        create_feature_file(name)
+        create_steps_file name
+        create_page_file name
+      end
+
+      desc 'step [RESOURCE_NAME]', 'Generates a step'
+      option :lang,
+             banner: 'any of the gherkin supported languages',
+             default: :en
+      def step(name)
+        I18n.config.default_locale = options[:lang]
+        in_root_project_folder?
+        create_steps_file name
+      end
+
+      desc 'page [RESOURCE_NAME]',
+           'Generates pages'
+      option :lang,
+             banner: 'any of the gherkin supported languages',
+             default: :en
+      def page(name)
+        I18n.config.default_locale = options[:lang]
+        in_root_project_folder?
+        create_page_file name
+      end
+
+      def self.source_root
+        File.join(File.dirname(__FILE__), '..', 'lib', 'templates')
+      end
+    end
+  end
+end
+
+module CS
+  module WEBAUTOMATOR
+    # Definition of the generators groups
+    class CsWebautomatorRunner < Thor
+      include Thor::Actions
+
+      map '-v' => :version
+      map '--version' => :version
+
+      default_task :help
+
+      register CS::WEBAUTOMATOR::Generate, 'generate',
+               'generate [GENERATOR] [RESOURCE_NAME]',
+               'Generates various resources'
+      register CS::WEBAUTOMATOR::Generate, 'g',
+               'g [GENERATOR] [RESOURCE_NAME]',
+               'Generates various resources'
+
+      desc 'new PROJECT_NAME',
+           'Generates the structure of a new project that uses '\
+           'Capybara, SitePrism, Selenium and Cucumber'
+      option :lang,
+             banner: 'any of the gherkin supported languages',
+             default: :en
+      def new(name)
+        I18n.config.default_locale = options[:lang]
+        # Thor will be responsible to look for identical
+        # files and possibles conflicts
+        directory File.join(File.dirname(__FILE__),
+                            '..', 'lib', 'skeleton'), name
+
+      end
+
+      desc 'version', 'Shows the gem version'
+      def version
+        puts "cs-webautomator Version #{CS::BDD::VERSION}"
+      end
+
+      def self.source_root
+        File.join(File.dirname(__FILE__), '..', 'lib', 'templates')
+      end
+
+      # Overriding the initialize method to load all the
+      # translations supported by the gem gherkin
+      def initialize(*args)
+        super
+        # Loading gherkin accepted translations
+        translations_file_path = File.join(
+          Gem.loaded_specs['gherkin'].full_gem_path,
+          'lib',
+          'gherkin',
+          'i18n.json'
+        )
+        # Parsing the JSON file
+        # Removing the sequence *| and all the alternative
+        # options for the gherkin translations
+        translations_json = JSON.parse(
+          File.read(translations_file_path)
+          .gsub(/\*\|/, '')
+          .gsub(/\|.*\"/, '"'))
+        # Converting the translations to YAML and storing in a temp file
+        translations_temp_file = Tempfile.new(['translations', '.yml'])
+        File.write(translations_temp_file, translations_json.to_yaml)
+        # Loading the translations from gherkin and from the
+        # locales folder of this gem
+        locales_folder_path = File.join(
+          File.dirname(__FILE__),
+          '..', 'lib', 'cs', 'webautomator', 'locales'
+        )
+        I18n.load_path = Dir[
+          translations_temp_file,
+          File.join(locales_folder_path, '*.yml')
+        ]
+        I18n.backend.load_translations
+        I18n.config.enforce_available_locales = true
+      end
+    end
+  end
+end
+
+CS::WEBAUTOMATOR::CsWebautomatorRunner.start

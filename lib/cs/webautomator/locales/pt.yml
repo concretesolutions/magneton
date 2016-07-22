@@ -1,0 +1,6 @@
+pt:
+  first_scenario: "Primeiro Cenário"
+  comments:
+    insert_steps: "Insira os passos"
+    elements: "Declare todos os elementos da tela"
+    actions: "Declare todas as acoes da tela"
