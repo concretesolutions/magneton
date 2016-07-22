@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = CS::WEBAUTOMATOR::VERSION
   spec.authors       = ['Samanta Cicilia']
   spec.email         = ['samycici@gmail.com']
-  spec.summary       = 'Generates an Capybara project.'
-  spec.description   = %q{A simple gem to generate all files needed in a project that will support Capybara.}
-  spec.homepage      = 'https://github.com/concretesolutions/cs-bdd'
+  spec.summary       = 'Generates an Web Test Automation project with Cucumber, SitePrism, Capybara and Selenium.'
+  spec.description   = %q{A simple gem to generate all files needed in a project that will support Cucumber, SitePrism, Capybara and Selenium.}
+  spec.homepage      = 'https://github.com/samycici/cs-webautomator'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
