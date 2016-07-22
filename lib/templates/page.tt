@@ -1,7 +1,6 @@
 class <%= config[:name] %>Page < SitePrism::Page
 
   # <%= I18n.translate 'comments.elements' %>
-  # element(:layout_name)         { pending 'Insert layout identificator' }
-  # element(:button)              { pending 'Insert button identificator' }
+  # element :button,       pending 'Insert button identificator' 
 
 end

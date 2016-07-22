@@ -15,7 +15,7 @@ def create_steps_file(name)
 
   # Step
     file_path = File.join(
-      FileUtils.pwd, 'features', 'step_definitions',
+      FileUtils.pwd, 'features', 'steps_definitions',
       "#{name.downcase}_steps.rb"
     )
 

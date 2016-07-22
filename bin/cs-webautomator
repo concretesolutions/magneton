@@ -19,7 +19,7 @@ module CS
       desc 'feature [RESOURCE_NAME]', 'Generates a feature'
       option :lang,
              banner: 'any of the gherkin supported languages',
-             default: :en
+             default: :pt
       def feature(name)
         I18n.config.default_locale = options[:lang]
         in_root_project_folder?
@@ -32,7 +32,7 @@ module CS
       desc 'step [RESOURCE_NAME]', 'Generates a step'
       option :lang,
              banner: 'any of the gherkin supported languages',
-             default: :en
+             default: :pt
       def step(name)
         I18n.config.default_locale = options[:lang]
         in_root_project_folder?
@@ -43,7 +43,7 @@ module CS
            'Generates pages'
       option :lang,
              banner: 'any of the gherkin supported languages',
-             default: :en
+             default: :pt
       def page(name)
         I18n.config.default_locale = options[:lang]
         in_root_project_folder?
@@ -80,7 +80,7 @@ module CS
            'Capybara, SitePrism, Selenium and Cucumber'
       option :lang,
              banner: 'any of the gherkin supported languages',
-             default: :en
+             default: :pt
       def new(name)
         I18n.config.default_locale = options[:lang]
         # Thor will be responsible to look for identical
@@ -92,7 +92,7 @@ module CS
 
       desc 'version', 'Shows the gem version'
       def version
-        puts "cs-webautomator Version #{CS::BDD::VERSION}"
+        puts "cs-webautomator Version #{CS::WEBAUTOMATOR::VERSION}"
       end
 
       def self.source_root

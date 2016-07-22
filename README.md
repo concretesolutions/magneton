@@ -1,57 +1,50 @@
 # CS::WEBAUTOMATOR
 
-## Installation
+## Instalação
 
-Install it as:
+Executar:
 
     $ gem install cs-webautomator
 
-## Usage
+## Uso
 
-In the terminal, type for help:
+No terminal, para acessar o help:
 
 ```
   cs-webautomator
   cs-webautomator generate
 ```
 
-To see the gem version type:
+Ver a versão da gem:
 
 ```
   cs-webautomator version
 ```
 
-To generate a project that support both Android and iOS features type:
+Gerar o projeto:
 
 ```
-  cs-webautomator new ProjectName
+  cs-webautomator new Projeto
 ```
 
-This command will create a folder named ProjectName in the current directory and will create all the needed files. This gem support localizations. To create a localized project, in Portuguese, type:
+Esse comando vai criar uma pasta com o nome Projeto no diretório corrente e criar os arquivos padrões. Projeto gerado em português por default.
 
-```
-  cs-webautomator new ProjectName --lang=pt
-```
-
-
-**The generators commands ONLY WORK in the ROOT FOLDER of the project**.
+**Os comandos generate só funcionam dentro da raiz do projeto**.
 
 ####Features
 
 ```
-  cs-webautomator generate feature FeatureName
+  cs-webautomator generate feature NomeFeature
 ```
-The feature generator will create a Platform independent feature and its files. So this command will create the FeatureName.feature file inside the folder `feature`, the file FeatureName_steps.rb inside the folder `features/step_definitions`, the file FeatureName_page.rb inside the folder `features/pages`.
 
-
-Don't forget about internationalization. All the generators accept the option `--lang=pt` or with some other language.
+Esse comando vai criar um arquivo NomeFeature.feature dentro de `features/specifications`, NomeFeature_steps.rb dentro de `features/step_definitions` e FeatureName_page.rb dentro de `features/pages`.
 
 ####Steps
 
 ```
-  cs-webautomator generate step StepName
+  cs-webautomator generate step NomeStep
 ```
-The step generator will create a Platform independent step file named StepName_steps.rb in the folder `features/step_definitions`
+Esse comando vai criar um arquivo NomeStep_steps.rb na pasta `features/step_definitions`
 
 
 ####Pages
@@ -59,19 +52,5 @@ The step generator will create a Platform independent step file named StepName_s
 ```
   cs-webautomator generate page PageName
 ```
-The step generator will create a Platform independent page file named StepName_page.rb in the folder `features/pages`
 
-
-## Continuous Integration (CI)
-
-The project contains a lot of scripts that will help you to configure you CI server.
-
-> Documentation under development.
-
-## Contributing
-
-1. Fork it ( https://github.com/samycici/cs-webautomator )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Esse comando vai criar um arquivo NomeStep_page.rb na pasta `features/pages`
