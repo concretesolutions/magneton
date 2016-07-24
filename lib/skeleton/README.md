@@ -1,96 +1,90 @@
-## Configurando o ambiente ##
+## Getting Started ##
 
-### Instalar rbenv ###
-Execute o seguinte comando:
+### Installing rbenv ###
+Run this:
 ```shell
 brew install rbenv
 ```
 
-Inclua no ~/.bash_profile:
+Add to ~/.bash_profile:
 ```shell
 eval "$(rbenv init -)"
 ```
 
-Listar as versões disponíveis:
+List all available versions:
 ```shell
 rbenv install -l
 ```
 
-Instalar uma versão:
+Install a Ruby version:
 ```shell
 rbenv install 2.3.1
 ```
 
-### Ativar rbenv 2.3.1 ###
-Navegar para pasta desejada e executar o seguinte comando:
+Sets a local application-specific Ruby 2.3.1:
 ```shell
 rbenv local 2.3.1
 ```
 
-### Instalando o bundler ###
-Navegar para pasta desejada e executar o seguinte comando:
+### Installing bundler ###
+Run this:
 ```shell
 gem install bundler
 ```
 
-### Instalando as gems ###
-Execute o seguinte comando dentro da raiz do projeto:
+### Installing gems ###
+Run this:
 ```shell
 bundle install
 ```
 
-### Drivers necessários: ###
-Instalar [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) e [phantomjs](http://phantomjs.org/) e adicionar ao PATH
+### Drivers: ###
+Install [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and [phantomjs](http://phantomjs.org/).
+Remenber include in the PATH.
 
-### Executando os testes em DEV usando Chrome###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run tests in DEV with Chrome###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber
 ```
 
-### Executando os testes em DEV usando Firefox###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run tests in DEV with Firefox###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber -p firefox -p dev
 ```
 
-### Executando os testes em DEV usando Poltergeist###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run tests in DEV with Poltergeist###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber -p poltergeist -p dev
 ```
 
-### Executando os testes em HMG usando Chrome###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run tests in HMG with Chrome###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber -p chrome -p hmg
 ```
 
-### Executando os testes em HMG usando Firefox###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run tests in HMG with Firefox###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber -p firefox -p hmg
 ```
-### Executando os testes em HMG usando Poltergeist###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run tests in HMG with Poltergeist###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber -p poltergeist -p hmg
 ```
 
-### Gerando relatório HTML###
-Execute o seguinte comando dentro da raiz do projeto:
+### HTML Report###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber -p html_report
 ```
 
-### Executando tags###
-Execute o seguinte comando dentro da raiz do projeto:
+### Run with tags###
+Run this in the tests folder:
 ```shell
 bundle exec cucumber --tags @run
-```
-
-### Rodados specs de TDD###
-Execute o seguinte comando dentro de TDD:
-```shell
-bundle exec rspec
 ```
