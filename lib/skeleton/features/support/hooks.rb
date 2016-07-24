@@ -4,6 +4,7 @@ Before do |feature|
     config.default_driver = :selenium
   end
   Capybara.default_max_wait_time = 20
+  Capybara.current_session.driver.browser.manage.window.maximize
 end
 
 After do |scenario|

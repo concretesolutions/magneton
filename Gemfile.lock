@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cs-webautomator (0.1.0)
+    cs-webautomator (0.1.6)
       bundler (>= 1.7)
       gherkin (= 2.12.2)
       i18n (>= 0.6.11)
