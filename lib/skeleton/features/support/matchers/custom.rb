@@ -1,5 +1,6 @@
 require 'rspec/expectations'
 
+## matcher to validate if all elements in list are equals
 RSpec::Matchers.define :all_list_elements_eq do |expected|
   match do |actual|
     actual.each do |i|
