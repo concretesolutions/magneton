@@ -9,7 +9,7 @@ require 'capybara/poltergeist'
 BROWSER = ENV['BROWSER']
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
 
-## register driver according with browser choosen
+## register driver according with browser chosen
 Capybara.register_driver :selenium do |app|
   if BROWSER.eql?('chrome')
     Capybara::Selenium::Driver.new(app,
