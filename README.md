@@ -86,7 +86,7 @@ The screen generator will create both Platform dependent screens in the folder `
 ## TODO
 
 1. Run tests in Remote Server
-2. Run tests in Internet Explorer and Safari
+2. Run tests in Internet Explorer
 3. Create base methods (click, set, etc) to use with elements
 
 

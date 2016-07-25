@@ -24,6 +24,8 @@ Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, :browser => :firefox)
   elsif BROWSER.eql?('internet_explorer')
     Capybara::Selenium::Driver.new(app, :browser => :internet_explorer)
+  elsif BROWSER.eql?('safari')
+    Capybara::Selenium::Driver.new(app, :browser => :safari)
   elsif BROWSER.eql?('poltergeist')
     options = { js_errors: false }
     Capybara::Poltergeist::Driver.new(app, options)
