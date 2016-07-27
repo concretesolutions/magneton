@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ffi', '1.9.14'
 gem 'capybara'
 gem 'cucumber'
 gem 'rake'

@@ -32,6 +32,12 @@ To install bundler type:
 gem install bundler
 ```
 
+#### Windows ####
+To install FFI package type:
+```shell
+bundle install ffi --platform ruby
+```
+
 ### Installing gems ###
 To install gems type:
 ```shell
@@ -39,10 +45,13 @@ bundle install
 ```
 
 ### Drivers: ###
-Install [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/) and [phantomjs](http://phantomjs.org/).
-Remenber include this in PATH.
+Install and include in PATH
+- [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
+- [phantomjs](http://phantomjs.org/)
+- [internetExplorerDriver](http://www.seleniumhq.org/download/)
 
 Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
+
 
 ### Run tests in DEV with Chrome###
 Type this in the tests folder:

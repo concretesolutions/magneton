@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
 def create_feature_file(name)
   # options used to generate the file in the template function
   opts = { name: camelize(name) }
