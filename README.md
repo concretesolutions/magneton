@@ -1,4 +1,4 @@
-# CS::WEBAUTOMATOR
+# MAGNETON
 
 A simple gem to generate web automation project with:
 
@@ -20,27 +20,27 @@ A simple gem to generate web automation project with:
 
 Install it as:
 
-    $ gem install cs-webautomator
+    $ gem install magneton
 
 ## Usage
 
 In the terminal, type for help:
 
 ```
-  cs-webautomator
-  cs-webautomator generate
+  magneton
+  magneton generate
 ```
 
 To see the gem version type:
 
 ```
-  cs-webautomator version
+  magneton version
 ```
 
 To generate a project type:
 
 ```
-  cs-webautomator new ProjectName
+  magneton new ProjectName
 ```
 
 ### Windows Caveats
@@ -65,12 +65,12 @@ This command will ensure your terminal is always using Unicode.
 This command will create a folder named ProjectName in the current directory and will create all the needed files. This gem support localizations. To create a localized project, in Portuguese, type:
 
 ```
-  cs-webautomator new ProjectName --lang=pt
+  magneton new ProjectName --lang=pt
 ```
 
-> The default language is English ('en'). The elements of Gherkin such as Given, When, Then, And, Scenario will be translated to all Gherkin supported languages, but this gem has just a few translation files (see that in folder: `lib/cs/webautomator/locales`).
+> The default language is English ('en'). The elements of Gherkin such as Given, When, Then, And, Scenario will be translated to all Gherkin supported languages, but this gem has just a few translation files (see that in folder: `lib/magneton/locales`).
 
-  > **CS-WEBAUTOMATOR doesn't support your mother language?** No problem. Fork it, create your yml translation file, uses the en.yml file as a template. Translate it and make a pull request. There are only 15 lines to be translated, this will take no time.
+  > **MAGNETON doesn't support your mother language?** No problem. Fork it, create your yml translation file, uses the en.yml file as a template. Translate it and make a pull request. There are only 15 lines to be translated, this will take no time.
 
   > **Want to know how to name your translation yml file?** See the Gherkin supported languages [here](https://github.com/cucumber/gherkin/blob/master/lib/gherkin/i18n.json) for reference.
 
@@ -83,14 +83,14 @@ There are three generators that are responsible to create the templates for Feat
 #### Features
 
 ```
-  cs-webautomator generate feature FeatureName
+  magneton generate feature FeatureName
 ```
 The feature generator will create a feature and its files. So this command will create the FeatureName.feature file inside the folder `features/specifications`, the file FeatureName_steps.rb inside the folder `features/step_definitions`, the files FeatureName_page.rb inside the folder `features/pages`.
 
 #### Steps
 
 ```
-  cs-webautomator generate step StepName
+  magneton generate step StepName
 ```
 The step generator will create a step file named StepName_steps.rb in the folder  `features/step_definitions`
 
@@ -98,7 +98,7 @@ The step generator will create a step file named StepName_steps.rb in the folder
 #### Pages
 
 ```
-  cs-webautomator generate page PageName
+  magneton generate page PageName
 ```
 
 The screen generator will create both Platform dependent screens in the folder `features/pages`
@@ -110,7 +110,7 @@ The screen generator will create both Platform dependent screens in the folder `
 
 ## Contributing
 
-1. Fork it ( https://github.com/samycici/cs-webautomator/fork )
+1. Fork it ( https://github.com/concretesolutions/magneton )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
