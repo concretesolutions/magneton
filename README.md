@@ -43,13 +43,22 @@ To generate a project type:
   cs-webautomator new ProjectName
 ```
 
-If you use Windows, type:
+### Windows Caveats
+
+##### If you face encoding problems, type: #####
 ```
 [HKEY_CURRENT_USER\Software\Microsoft\Command Processor] "AutoRun"="chcp 65001"
 ```
+This command will ensure your terminal is always using Unicode.
 
-to resolve encoding problems.
+##### Preparing Internet Explorer #####
 
+1. Check zoom level. It must be configured to 100%:
+    * ![Step 1](readme_img/step_1.png?raw=true "Check zoom level")
+2. Disable 'Protected Mode' for all zones on Internet Options > Security:
+    * ![Step 2](readme_img/step_2.png?raw=true "Disable 'Protected Mode'")
+
+#### Localized Project Generation
 This command will create a folder named ProjectName in the current directory and will create all the needed files. This gem support localizations. To create a localized project, in Portuguese, type:
 
 ```
