@@ -28,7 +28,7 @@ In the terminal, type for help:
 
 ```
   cs-webautomator
-  cs-webautomator generate
+cs-webautomator generate
 ```
 
 To see the gem version type:
@@ -43,17 +43,18 @@ To generate a project type:
   cs-webautomator new ProjectName
 ```
 
-This command will create a folder named ProjectName in the current directory and will create all the needed files. This gem support localizations. To create a localized project, in Portuguese, type:
-
-```
-  cs-webautomator new ProjectName --lang=pt
-```
 If you use Windows, type:
 ```
 [HKEY_CURRENT_USER\Software\Microsoft\Command Processor] "AutoRun"="chcp 65001"
 ```
 
 to resolve encoding problems.
+
+This command will create a folder named ProjectName in the current directory and will create all the needed files. This gem support localizations. To create a localized project, in Portuguese, type:
+
+```
+  cs-webautomator new ProjectName --lang=pt
+```
 
 > The default language is English ('en'). The elements of Gherkin such as Given, When, Then, And, Scenario will be translated to all Gherkin supported languages, but this gem has just a few translation files (see that in folder: `lib/cs/webautomator/locales`).
 
@@ -93,9 +94,7 @@ The screen generator will create both Platform dependent screens in the folder `
 ## TODO
 
 1. Run tests in Remote Server
-2. Run tests in Internet Explorer
-3. Create base methods (click, set, etc) to use with elements
-
+2. Add more base methods using Selenium
 
 ## Contributing
 
