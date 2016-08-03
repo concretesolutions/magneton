@@ -1,20 +1,20 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cs/webautomator/version'
+require 'magneton/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'cs-webautomator'
-  spec.version       = CS::WEBAUTOMATOR::VERSION
+  spec.name          = 'magneton'
+  spec.version       = MAGNETON::VERSION
   spec.authors       = ['Samanta Cicilia']
   spec.email         = ['samycici@gmail.com']
   spec.summary       = 'Generates an Web Test Automation project with Cucumber, SitePrism, Capybara and Selenium.'
   spec.description   = %q{A simple gem to generate all files needed in a project that will support Cucumber, SitePrism, Capybara and Selenium.}
-  spec.homepage      = 'https://github.com/samycici/cs-webautomator'
+  spec.homepage      = 'https://github.com/concretesolutions/magneton'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = ['cs-webautomator']
+  spec.executables   = ['magneton']
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
