@@ -28,7 +28,7 @@ In the terminal, type for help:
 
 ```
   cs-webautomator
-cs-webautomator generate
+  cs-webautomator generate
 ```
 
 To see the gem version type:
