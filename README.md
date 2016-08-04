@@ -91,7 +91,15 @@ The step generator will create a step file named StepName_steps.rb in the folder
   magneton generate page PageName
 ```
 
-The screen generator will create both Platform dependent screens in the folder `features/pages`
+The page generator will create a page file named PageName_page.rb in the folder `features/pages`
+
+#### Helpers
+
+In the file `features/support/helper.rb` you will find utilities to help your tests.
+
+Implemented so far:
+- take_screenshot
+- mouse_over
 
 ## TODO
 
