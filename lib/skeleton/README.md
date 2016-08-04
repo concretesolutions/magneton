@@ -38,11 +38,11 @@ gem install bundler
 
 1. Check zoom level. It must be configured to 100%:
 
-     ![Step 1](../../readme_img/step_1.png?raw=true "Check zoom level")
+     ![Step 1](readme_img/step_1.png?raw=true "Check zoom level")
 
 2. Disable 'Protected Mode' for all zones on Internet Options > Security:
 
-    ![Step 2](../../readme_img/step_2.png?raw=true "Disable 'Protected Mode'")
+    ![Step 2](readme_img/step_2.png?raw=true "Disable 'Protected Mode'")
 
 ##### Install FFI #####
 
