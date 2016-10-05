@@ -5,6 +5,8 @@ require 'site_prism'
 require 'rspec'
 require 'yaml'
 require 'capybara/poltergeist'
+require_relative 'helper.rb'
+require 'imatcher'
 
 BROWSER = ENV['BROWSER']
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
@@ -31,3 +33,5 @@ Capybara.register_driver :selenium do |app|
     Capybara::Poltergeist::Driver.new(app, options)
   end
 end
+
+IMATCHER = Imatcher::Matcher.new mode: :grayscale, tolerance: 1
