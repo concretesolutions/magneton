@@ -14,14 +14,12 @@ ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
 ## register driver according with browser chosen
 Capybara.register_driver :selenium do |app|
   if BROWSER.eql?('chrome')
-    Capybara::Selenium::Driver.new(app,
-    :browser => :chrome,
-    :desired_capabilities => Selenium::WebDriver::Remote::Capabilities.chrome(
-      'chromeOptions' => {
-        'args' => [ "--start-maximized" ]
-      }
-    )
+    caps = Selenium::WebDriver::Remote::Capabilities.chrome(
+    'chromeOptions' => {
+      "args" => [ "--window-size=1600,1300"]
+    }
   )
+    Capybara::Selenium::Driver.new(app, {:browser => :chrome, :desired_capabilities => caps})
   elsif BROWSER.eql?('firefox')
     Capybara::Selenium::Driver.new(app, :browser => :firefox)
   elsif BROWSER.eql?('internet_explorer')
