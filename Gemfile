@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in cs-webautomator.gemspec
+# Specify your gem's dependencies in magneton.gemspec
 gemspec
 
 gem 'thor'
