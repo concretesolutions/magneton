@@ -23,4 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'thor', '>= 0.19.1'
   spec.add_runtime_dependency 'i18n', '>= 0.6.11'
   spec.add_runtime_dependency 'gherkin', '2.12.2'
+  spec.add_runtime_dependency 'chunky_png', '1.3.7'
+  spec.add_runtime_dependency 'imatcher', '0.1.5'
+
 end
