@@ -100,6 +100,17 @@ In the file `features/support/helper.rb` you will find utilities to help your te
 Implemented so far:
 - take_screenshot
 - mouse_over
+- visual matching
+
+##### Visual Matching
+
+You can compare images using the `visual_matcher` method:
+`expect('imagem_atual').to visual_match('imagem_baseline')`
+
+Example: 
+Baseline Image: ![]()
+Current Image: ![]()
+Diff: ![]()
 
 ## TODO
 
