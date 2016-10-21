@@ -1,0 +1,13 @@
+machine:
+   ruby:
+     version: 2.3.0
+
+dependencies:
+   override:
+     - gem install bundler
+     - gem install rake
+     - bundle install
+
+test:
+   override:
+    - CODECLIMATE_REPO_TOKEN=c992e4ea792ab168d686a2b1779b2adf2c95d64a47145c87d2ba50d70b398428 bundle exec rake spec_tests
