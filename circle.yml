@@ -10,4 +10,4 @@ dependencies:
 
 test:
    override:
-    - CODECLIMATE_REPO_TOKEN=65e2b025c8caf3c157bb6ed036398585066821dfb3c34d7499eb96f1ee59bddc bundle exec rake test_rspec
+    - CODECLIMATE_REPO_TOKEN=c992e4ea792ab168d686a2b1779b2adf2c95d64a47145c87d2ba50d70b398428 bundle exec rake spec_tests
