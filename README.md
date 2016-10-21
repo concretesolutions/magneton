@@ -107,10 +107,7 @@ Implemented so far:
 You can compare images using the `visual_matcher` method:
 `expect('imagem_atual').to visual_match('imagem_baseline')`
 
-Example: 
-Baseline Image: ![]()
-Current Image: ![]()
-Diff: ![]()
+You can create the baseline_images if you include the tag `@create_baseline_image` on your scenarios.
 
 ## TODO
 
