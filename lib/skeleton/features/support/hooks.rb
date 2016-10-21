@@ -27,3 +27,9 @@ After do |scenario|
     Capybara.current_session.driver.quit
   end
 end
+
+After('@create_baseline_image') do |scenario|
+  # Add screenshot to baseline folder.
+  @helper = Helper.new
+  @helper.take_screenshot(scenario.name, 'screenshots/baseline')
+end
