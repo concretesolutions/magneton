@@ -1,4 +1,4 @@
-# MAGNETON
+# MAGNETON [![Circle CI](https://circleci.com/gh/concretesolutions/magneton.svg?style=shield)](https://circleci.com/gh/concretesolutions/magneton) [![Code Climate](https://codeclimate.com/github/concretesolutions/magneton.png)](https://codeclimate.com/github/concretesolutions/magneton) [![Test Coverage](https://codeclimate.com/github/concretesolutions/magneton/badges/coverage.svg)](https://codeclimate.com/github/concretesolutions/magneton/coverage) [![Issue Count](https://codeclimate.com/github/concretesolutions/magneton/badges/issue_count.svg)](https://codeclimate.com/github/concretesolutions/magneton)
 
 A simple gem to generate web automation project with:
 

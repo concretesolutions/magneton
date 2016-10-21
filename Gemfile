@@ -8,3 +8,5 @@ gem 'i18n'
 gem 'json'
 gem 'gherkin'
 gem 'rspec'
+gem 'simplecov'
+gem "codeclimate-test-reporter", group: :test, require: nil

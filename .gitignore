@@ -12,3 +12,4 @@ mkmf.log
 .irb-history
 .DS_Store
 Gemfile.lock
+coverage/
