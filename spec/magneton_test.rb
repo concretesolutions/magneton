@@ -1,4 +1,5 @@
-describe MAGNETON do
+require 'fileutils'
+describe 'MAGNETON' do
 
   before(:each) do
     @project_name = 'web_automator'
@@ -29,15 +30,6 @@ describe MAGNETON do
         system "magneton new '#{@project_name}' invalid argument"
 
         expect(Dir.entries(".")).not_to include("#{@project_name}")
-      end
-    end
-
-    context 'Should return the latest version of magneton' do
-      it 'Returns the latest version' do
-        system "magneton version"
-        version = "#{MAGNETON::VERSION}"
-
-        expect(version).to end_with('0.1.0')
       end
     end
 
