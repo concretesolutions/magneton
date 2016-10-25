@@ -1,5 +1,7 @@
 # MAGNETON [![Circle CI](https://circleci.com/gh/concretesolutions/magneton.svg?style=shield)](https://circleci.com/gh/concretesolutions/magneton) [![Code Climate](https://codeclimate.com/github/concretesolutions/magneton.png)](https://codeclimate.com/github/concretesolutions/magneton) [![Test Coverage](https://codeclimate.com/github/concretesolutions/magneton/badges/coverage.svg)](https://codeclimate.com/github/concretesolutions/magneton/coverage) [![Issue Count](https://codeclimate.com/github/concretesolutions/magneton/badges/issue_count.svg)](https://codeclimate.com/github/concretesolutions/magneton)
 
+[![Gem Version](https://badge.fury.io/rb/magneton.svg)](https://badge.fury.io/rb/magneton)
+
 A simple gem to generate web automation project with:
 
 > Cucumber [(link)](https://cucumber.io/)
