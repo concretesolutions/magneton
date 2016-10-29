@@ -1,4 +1,7 @@
 require 'fileutils'
+require 'simplecov'
+SimpleCov.start
+
 describe 'MAGNETON' do
 
   before(:each) do
