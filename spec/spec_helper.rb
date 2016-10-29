@@ -16,10 +16,7 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'simplecov'
 require "codeclimate-test-reporter"
-
-ENV['CODECLIMATE_REPO_TOKEN'] = "c992e4ea792ab168d686a2b1779b2adf2c95d64a47145c87d2ba50d70b398428"
 CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
