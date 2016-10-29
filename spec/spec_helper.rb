@@ -18,8 +18,10 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 require "codeclimate-test-reporter"
-SimpleCov.start
+
+ENV['CODECLIMATE_REPO_TOKEN'] = "c992e4ea792ab168d686a2b1779b2adf2c95d64a47145c87d2ba50d70b398428"
 CodeClimate::TestReporter.start
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
