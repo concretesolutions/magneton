@@ -44,7 +44,12 @@ class Helper
     bottom = size['height'] * 2
 
     # crop original image and save
-    image.crop!(left , top, right, bottom)
+    # crop original image
+    if OS.mac?
+      image.crop!(left * 2 , top * 2, right * 2, bottom * 2)
+    else
+      image.crop!(left , top, right, bottom)
+    end
     image.save(file)
   end
 end

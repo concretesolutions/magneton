@@ -8,6 +8,7 @@ require 'capybara/poltergeist'
 require_relative 'helper.rb'
 require 'imatcher'
 require 'chunky_png'
+require 'os'
 
 BROWSER = ENV['BROWSER']
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
