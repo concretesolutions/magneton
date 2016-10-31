@@ -101,6 +101,7 @@ Implemented so far:
 - take_screenshot
 - mouse_over
 - visual matching
+- crop screenshot
 
 ##### Visual Matching
 
@@ -108,6 +109,11 @@ You can compare images using the `visual_matcher` method:
 `expect('imagem_atual').to visual_match('imagem_baseline')`
 
 You can create the baseline_images if you include the tag `@create_baseline_image` on your scenarios.
+
+##### Crop screenshot
+
+You can crop a screenshot around element, just only use  `take_screenshot_and_crop` method:
+`take_screenshot_and_crop(name_file, folder_to_save, css_selector)`
 
 ## TODO
 
