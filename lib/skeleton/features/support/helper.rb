@@ -38,10 +38,10 @@ class Helper
     image = ChunkyPNG::Image.from_file('screenshots/test_screens/image_to_crop.png')
 
     # get X, Y, width and height
-    left = location['x'] * 2
-    top = location['y'] * 2
-    right = size['width'] * 2
-    bottom = size['height'] * 2
+    left = location['x']
+    top = location['y']
+    right = size['width']
+    bottom = size['height']
 
     # crop original image and save
     # crop original image
