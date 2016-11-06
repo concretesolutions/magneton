@@ -1,0 +1,29 @@
+desc "Executar os testes em dev usando o Chrome"
+task :test_chrome_dev do
+  puts "Executando test:chrome:dev"
+  sh "bundle exec cucumber -p chrome -p dev"
+end
+
+desc "Executar os testes em dev usando o Firefox"
+task :test_firefox_dev do
+  puts "Executando test:firefox:dev"
+  sh "bundle exec cucumber -p firefox -p dev"
+end
+
+desc "Executar os testes em dev usando o Safari"
+task :test_safari_dev do
+  puts "Executando test:safari:dev"
+  sh "bundle exec cucumber -p safari -p dev"
+end
+
+desc "Executar os testes em dev usando o Poltergeist"
+task :test_poltergeist_dev do
+  puts "Executando test:poltergeist:dev"
+  sh "bundle exec cucumber -p poltergeist -p dev"
+end
+
+desc "Executar os testes em dev usando o Internet Explorer"
+task :test_internet_explorer_dev do
+  puts "Executando test:internet_explorer:dev"
+  sh "bundle exec cucumber -p internet_explorer -p dev"
+end
