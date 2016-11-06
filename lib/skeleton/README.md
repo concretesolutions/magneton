@@ -62,6 +62,7 @@ Install and include in PATH
 - [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
 - [phantomjs](http://phantomjs.org/)
 - [internetExplorerDriver](http://www.seleniumhq.org/download/)
+- [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
 
 Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
 

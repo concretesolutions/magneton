@@ -11,10 +11,6 @@ class Helper
     FileUtils.mkdir_p(folder) unless File.exist?(folder)
     if BROWSER.eql?('poltergeist')
       Capybara.page.save_screenshot(file)
-    elsif BROWSER.eql?('chrome')
-      # zoom to screenshot all page
-      Capybara.page.driver.browser.execute_script("document.body.style.zoom=(top.window.screen.height-70)/Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);")
-      Capybara.page.driver.browser.save_screenshot(file)
     else
       Capybara.page.driver.browser.save_screenshot(file)
     end

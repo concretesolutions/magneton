@@ -4,6 +4,8 @@ Before do |feature|
   ## variable which loads the data file according to the environment
   CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
 
+  I18n.config.available_locales = :en
+
   ## configure the chosen browser
   Capybara.configure do |config|
     config.default_driver = :selenium
@@ -21,10 +23,6 @@ After do |scenario|
   ## take screenshot if scenario fail
   if scenario.failed?
     @helper.take_screenshot(scenario.name, 'screenshots/test_failed')
-  end
-  ## if the browser is different from poltergeist, kills instance
-  unless BROWSER.eql?('poltergeist')
-    Capybara.current_session.driver.quit
   end
 end
 
