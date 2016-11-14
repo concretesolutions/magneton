@@ -12,6 +12,21 @@ RSpec::Matchers.define :all_list_elements_eq do |expected|
   end
 end
 
+## matcher to validate if all elements is contained in
+RSpec::Matchers.define :have_all_elements do |expected|
+  match do |actual|
+    actual.each do |i|
+      expect(expected.include? i).to be true
+    end
+  end
+  failure_message do |actual|
+    "expected that all elements in #{actual} is contained in #{expected}"
+  end
+  description do
+    "have all elements in #{expected}"
+  end
+end
+
 RSpec::Matchers.define :visual_match do |expected|
   match do |actual|
     base_path = File.expand_path(".", Dir.pwd) + '/screenshots/'
