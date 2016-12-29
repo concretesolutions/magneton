@@ -17,10 +17,10 @@ def create_steps_file(name)
   opts = { name: camelize(name) }
 
   # Step
-    file_path = File.join(
-      FileUtils.pwd, 'features', 'steps_definitions',
-      "#{name.downcase}_steps.rb"
-    )
+  file_path = File.join(
+    FileUtils.pwd, 'features', 'steps_definitions',
+    "#{name.downcase}_steps.rb"
+  )
 
   # Thor creates a file based on the templates/steps.tt template
   template('steps', file_path, opts)
@@ -32,9 +32,7 @@ def create_page_file(name)
 
   # Thor creates a file based on the templates/page.tt template
   template('page',
-           File.join(
-             FileUtils.pwd, 'features', 'pages',
-             "#{name.downcase}_page.rb"),
+           File.join(FileUtils.pwd, 'features', 'pages', "#{name.downcase}_page.rb"),
            opts)
 end
 
@@ -50,7 +48,7 @@ end
 
 def in_root_project_folder?
   # Looks if the user is in the root folder of the project
-  if !Dir.exist?(File.join(FileUtils.pwd, 'features', 'specifications'))
+  unless Dir.exist?(File.join(FileUtils.pwd, 'features', 'specifications'))
     puts 'Please run this command on the root folder of the project'
     exit 1
   end

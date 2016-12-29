@@ -17,9 +17,7 @@ module MAGNETON
     include Thor::Actions
 
     desc 'feature [RESOURCE_NAME]', 'Generates a feature'
-    option :lang,
-            banner: 'any of the gherkin supported languages',
-            default: :en
+    option :lang, banner: 'any of the gherkin supported languages', default: :en
     def feature(name)
       I18n.config.default_locale = options[:lang]
       in_root_project_folder?
@@ -30,20 +28,15 @@ module MAGNETON
     end
 
     desc 'step [RESOURCE_NAME]', 'Generates a step'
-    option :lang,
-            banner: 'any of the gherkin supported languages',
-            default: :en
+    option :lang, banner: 'any of the gherkin supported languages', default: :en
     def step(name)
       I18n.config.default_locale = options[:lang]
       in_root_project_folder?
       create_steps_file name
     end
 
-    desc 'page [RESOURCE_NAME]',
-          'Generates pages'
-    option :lang,
-            banner: 'any of the gherkin supported languages',
-            default: :en
+    desc 'page [RESOURCE_NAME]', 'Generates pages'
+    option :lang, banner: 'any of the gherkin supported languages', default: :en
     def page(name)
       I18n.config.default_locale = options[:lang]
       in_root_project_folder?
@@ -67,25 +60,21 @@ module MAGNETON
     default_task :help
 
     register MAGNETON::Generate, 'generate',
-              'generate [GENERATOR] [RESOURCE_NAME]',
-              'Generates various resources'
-    register MAGNETON::Generate, 'g',
-              'g [GENERATOR] [RESOURCE_NAME]',
-              'Generates various resources'
+             'generate [GENERATOR] [RESOURCE_NAME]',
+             'Generates various resources'
+    register MAGNETON::Generate, 'g', 'g [GENERATOR] [RESOURCE_NAME]',
+             'Generates various resources'
 
     desc 'new PROJECT_NAME',
-          'Generates the structure of a new project that uses '\
-          'Capybara, SitePrism, Selenium and Cucumber'
-    option :lang,
-            banner: 'any of the gherkin supported languages',
-            default: :en
+         'Generates the structure of a new project that uses '\
+         'Capybara, SitePrism, Selenium and Cucumber'
+    option :lang, banner: 'any of the gherkin supported languages', default: :en
     def new(name)
       I18n.config.default_locale = options[:lang]
       # Thor will be responsible to look for identical
       # files and possibles conflicts
       directory File.join(File.dirname(__FILE__),
                           '..', 'lib', 'skeleton'), name
-
     end
 
     desc 'version', 'Shows the gem version'
@@ -114,7 +103,8 @@ module MAGNETON
       translations_json = JSON.parse(
         File.read(translations_file_path)
         .gsub(/\*\|/, '')
-        .gsub(/\|.*\"/, '"'))
+        .gsub(/\|.*\"/, '"')
+      )
       # Converting the translations to YAML and storing in a temp file
       translations_temp_file = Tempfile.new(['translations', '.yml'])
       File.write(translations_temp_file, translations_json.to_yaml)

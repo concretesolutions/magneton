@@ -8,8 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = MAGNETON::VERSION
   spec.authors       = ['Samanta Cicilia']
   spec.email         = ['samycici@gmail.com']
-  spec.summary       = 'Generates an Web Test Automation project with Cucumber, SitePrism, Capybara and Selenium.'
-  spec.description   = %q{A simple gem to generate all files needed in a project that will support Cucumber, SitePrism, Capybara and Selenium.}
+  spec.summary       = 'Generates an Web Test Automation project with Cucumber,
+  SitePrism, Capybara and Selenium.'
+  spec.description = 'A simple gem to generate all files needed in a
+  project that will support Cucumber, SitePrism, Capybara and Selenium.'
   spec.homepage      = 'https://github.com/concretesolutions/magneton'
   spec.license       = 'MIT'
 
@@ -23,5 +25,4 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'thor', '~> 0.19'
   spec.add_runtime_dependency 'i18n', '~> 0.6'
   spec.add_runtime_dependency 'gherkin', '2.12.2'
-
 end
