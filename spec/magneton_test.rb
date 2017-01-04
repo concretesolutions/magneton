@@ -3,7 +3,6 @@ require 'simplecov'
 SimpleCov.start
 
 describe 'MAGNETON' do
-
   before(:each) do
     @project_name = 'web_automator'
   end
@@ -32,7 +31,7 @@ describe 'MAGNETON' do
       it 'Project will not be generated' do
         system "magneton new '#{@project_name}' invalid argument"
 
-        expect(Dir.entries(".")).not_to include("#{@project_name}")
+        expect(Dir.entries('.')).not_to include(@project_name.to_s)
       end
     end
 
@@ -48,10 +47,10 @@ describe 'MAGNETON' do
 
         Dir.chdir('../')
 
-        expect(File.readlines("#{@project_name}/features/specifications/#{feature_name}.feature")).
-            to include("# language: pt\n", "Funcionalidade: #{feature_name.capitalize}\n", "\n", "  Contexto:\n", "    # Insira os passos\n", "\n", "  Cenário: Primeiro Cenário\n", "    # Insira os passos\n")
-        expect(File.readlines("#{@project_name}/features/steps_definitions/#{feature_name}_steps.rb")).
-            to include("######### DADO #########\n", "\n", "######### QUANDO #########\n", "\n", "######### ENTãO #########\n")
+        expect(File.readlines("#{@project_name}/features/specifications/#{feature_name}.feature"))
+          .to include("# language: pt\n", "Funcionalidade: #{feature_name.capitalize}\n", "\n", "  Contexto:\n", "    # Insira os passos\n", "\n", "  Cenário: Primeiro Cenário\n", "    # Insira os passos\n")
+        expect(File.readlines("#{@project_name}/features/steps_definitions/#{feature_name}_steps.rb"))
+          .to include("######### DADO #########\n", "\n", "######### QUANDO #########\n", "\n", "######### ENTãO #########\n")
       end
 
       it 'Generates a feature using english language' do
@@ -65,10 +64,10 @@ describe 'MAGNETON' do
 
         Dir.chdir('../')
 
-        expect(File.readlines("#{@project_name}/features/specifications/#{feature_name}.feature")).
-            to include("# language: en\n", "Feature: #{feature_name.capitalize}\n", "\n", "  Background:\n", "    # Insert steps\n", "\n", "  Scenario: First Scenario\n", "    # Insert steps\n")
-        expect(File.readlines("#{@project_name}/features/steps_definitions/#{feature_name}_steps.rb")).
-            to include("######### GIVEN #########\n", "\n", "######### WHEN #########\n", "\n", "######### THEN #########\n")
+        expect(File.readlines("#{@project_name}/features/specifications/#{feature_name}.feature"))
+          .to include("# language: en\n", "Feature: #{feature_name.capitalize}\n", "\n", "  Background:\n", "    # Insert steps\n", "\n", "  Scenario: First Scenario\n", "    # Insert steps\n")
+        expect(File.readlines("#{@project_name}/features/steps_definitions/#{feature_name}_steps.rb"))
+          .to include("######### GIVEN #########\n", "\n", "######### WHEN #########\n", "\n", "######### THEN #########\n")
       end
     end
 

@@ -16,10 +16,10 @@ class Helper
     end
   end
 
-  def take_screenshot_and_crop(name_file, folder = 'screenshots/croped_files', css_element_crop)
+  def take_screenshot_and_crop(name_file, css_element_crop, folder = 'screenshots/croped_files')
     file = "#{folder}/#{name_file}.png"
     FileUtils.mkdir_p(folder) unless File.exist?(folder)
-    #scroll to element
+    # scroll to element
     element = Capybara.page.driver.browser.find_element(:css, css_element_crop)
     element.location_once_scrolled_into_view
 
@@ -42,9 +42,9 @@ class Helper
     # crop original image and save
     # crop original image
     if OS.mac?
-      image.crop!(left * 2 , top * 2, right * 2, bottom * 2)
+      image.crop!(left * 2, top * 2, right * 2, bottom * 2)
     else
-      image.crop!(left , top, right, bottom)
+      image.crop!(left, top, right, bottom)
     end
     image.save(file)
   end

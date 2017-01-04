@@ -1,6 +1,6 @@
 require 'version'
 # encoding: UTF-8
 
+# Your code goes here...
 module MAGNETON
-  # Your code goes here...
 end
