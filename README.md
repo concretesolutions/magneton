@@ -28,7 +28,6 @@ In the terminal, type for help:
 
 ```
   magneton
-  magneton generate
 ```
 
 To see the gem version type:
