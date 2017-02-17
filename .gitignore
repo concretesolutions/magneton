@@ -14,3 +14,4 @@ mkmf.log
 Gemfile.lock
 coverage/
 File::NULL
+*.gem
