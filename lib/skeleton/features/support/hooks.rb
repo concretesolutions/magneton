@@ -2,14 +2,10 @@ require_relative 'helper.rb'
 ## variable which loads the data file according to the environment
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
 
-<<<<<<< HEAD
 Before do |feature|
-=======
-Before do |_feature|
   ## variable which loads the data file according to the environment
   CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
 
->>>>>>> 25bca70a1892ec69aaad6e496bed3ac32d59778d
   I18n.config.available_locales = :en
 
   ## configure the chosen browser
@@ -19,7 +15,7 @@ Before do |_feature|
 
   ## set default max wait
   Capybara.default_max_wait_time = 60
-  
+
   ## maximize browser
   unless BROWSER.eql?('poltergeist')
     screen_width = Capybara.page.execute_script("return screen.width;")
