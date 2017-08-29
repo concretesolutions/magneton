@@ -10,3 +10,4 @@ safari: BROWSER=safari
 headless_xvfb: BROWSER=headless_xvfb
 dev: ENVIRONMENT_TYPE=dev
 hmg: ENVIRONMENT_TYPE=hmg
+remote_browser: BROWSER=remote_browser
