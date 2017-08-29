@@ -13,4 +13,4 @@ mkmf.log
 .DS_Store
 Gemfile.lock
 coverage/
-File::NULL
+*.gem
