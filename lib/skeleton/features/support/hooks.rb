@@ -2,7 +2,7 @@ require_relative 'helper.rb'
 ## variable which loads the data file according to the environment
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
 
-Before do |feature|
+Before do |_feature|
   ## variable which loads the data file according to the environment
   CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
 
