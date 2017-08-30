@@ -50,7 +50,7 @@ describe 'MAGNETON' do
         expect(File.readlines("#{@project_name}/features/specifications/#{feature_name}.feature"))
           .to include("# language: pt\n", "Funcionalidade: #{feature_name.capitalize}\n", "\n", "  Contexto:\n", "    # Insira os passos\n", "\n", "  Cenário: Primeiro Cenário\n", "    # Insira os passos\n")
         expect(File.readlines("#{@project_name}/features/steps_definitions/#{feature_name}_steps.rb"))
-          .to include("######### DADO #########\n", "\n", "######### QUANDO #########\n", "\n", "######### ENTãO #########\n")
+          .to include("######### DADO #########\n", "\n", "######### QUANDO #########\n", "\n", "######### ENTÃO #########\n")
       end
 
       it 'Generates a feature using english language' do
