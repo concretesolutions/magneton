@@ -1,6 +1,4 @@
 require_relative 'helper.rb'
-## variable which loads the data file according to the environment
-CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yaml")
 
 Before do |feature|
   ## variable which loads the data file according to the environment
@@ -13,14 +11,10 @@ Before do |feature|
     config.default_driver = :selenium
   end
 
-  ## set default max wait
+  ## set default max wait and maximize browser
   Capybara.default_max_wait_time = 60
-
-  ## maximize browser
   unless BROWSER.eql?('poltergeist')
-    screen_width = Capybara.page.execute_script("return screen.width;")
-    screen_height = Capybara.page.execute_script("return screen.height;")
-    Capybara.current_session.driver.browser.manage.window.resize_to(screen_width,screen_height)
+    Capybara.current_session.driver.browser.manage.window.maximize
   end
 end
 

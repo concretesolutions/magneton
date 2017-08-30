@@ -51,16 +51,6 @@ To install FFI package type:
 bundle install ffi --platform ruby
 ```
 
-### Installing Xvfb in Linux ###
-If you run tests with xvfb, its necessary install:
-```shell
-apt-get install xvfb firefox  
-```
-or
-```shell
-yum install xvfb firefox
-```
-
 ### Installing gems ###
 To install gems type:
 ```shell
@@ -77,42 +67,61 @@ Install and include in PATH
 Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
 
 
-### Run tests in DEV with Chrome###
+### Run tests in DEV with Chrome ###
 Type this in the tests folder:
 ```shell
 bundle exec cucumber
 ```
 
-### Run tests in DEV with Firefox###
+### Run tests in DEV with Firefox ###
 Type this in the tests folder:
 ```shell
 bundle exec cucumber -p firefox -p dev
 ```
 
-### Run tests in DEV with Safari###
+### Run tests in DEV with Safari ###
 Type this in the tests folder:
 ```shell
 bundle exec cucumber -p safari -p dev
 ```
 
-### Run tests in DEV with Poltergeist###
+### Run tests in DEV with Poltergeist ###
 Type this in the tests folder:
 ```shell
 bundle exec cucumber -p poltergeist -p dev
 ```
-### Run tests in DEV with Xvfb Headless###
+
+### Run tests in HMG with Chrome ###
 Type this in the tests folder:
 ```shell
-bundle exec cucumber -p headless_xvfb -p dev
+bundle exec cucumber -p chrome -p hmg
 ```
 
-### HTML Report###
+### Run tests in HMG with Firefox ###
+Type this in the tests folder:
+```shell
+bundle exec cucumber -p firefox -p hmg
+```
+
+### Run tests in HMG with Safari ###
+Type this in the tests folder:
+```shell
+bundle exec cucumber -p safari -p hmg
+```
+
+### Run tests in HMG with Poltergeist ###
+Type this in the tests folder:
+```shell
+bundle exec cucumber -p poltergeist -p hmg
+```
+
+### HTML Report ###
 Type this in the tests folder:
 ```shell
 bundle exec cucumber -p html_report
 ```
 
-### Run with tags###
+### Run with tags ###
 Type this in the tests folder:
 ```shell
 bundle exec cucumber --tags @run
