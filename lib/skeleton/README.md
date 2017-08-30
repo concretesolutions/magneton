@@ -57,6 +57,21 @@ To install gems type:
 bundle install
 ```
 
+### Installing Xvfb in Linux ###
+If you run tests with xvfb, its necessary install:
+```shell
+apt-get install xvfb firefox  
+```
+
+or
+```shell
+yum install xvfb firefox
+```
+
+### Using Selenium Grid for remote browser ###
+Use https://github.com/zalando/zalenium or http://www.seleniumhq.org/projects/grid/
+
+
 ### Drivers: ###
 Install and include in PATH
 - [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
@@ -91,28 +106,15 @@ Type this in the tests folder:
 bundle exec cucumber -p poltergeist -p dev
 ```
 
-### Run tests in HMG with Chrome ###
+### Run tests in DEV with headless xvfb ###
 Type this in the tests folder:
 ```shell
-bundle exec cucumber -p chrome -p hmg
+bundle exec cucumber -p headless_xvfb -p dev
 ```
-
-### Run tests in HMG with Firefox ###
+### Run tests in DEV with remote browser ###
 Type this in the tests folder:
 ```shell
-bundle exec cucumber -p firefox -p hmg
-```
-
-### Run tests in HMG with Safari ###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p safari -p hmg
-```
-
-### Run tests in HMG with Poltergeist ###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p poltergeist -p hmg
+bundle exec cucumber -p remote_browser -p dev
 ```
 
 ### HTML Report ###
