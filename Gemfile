@@ -10,3 +10,4 @@ gem 'json'
 gem 'rspec'
 gem 'simplecov', '~> 0.12.0'
 gem 'thor', '~> 0.19.1'
+
