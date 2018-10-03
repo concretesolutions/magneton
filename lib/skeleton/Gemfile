@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 group :test do
-  gem 'ffi', '1.9.14'
-  gem 'capybara'
+  gem 'ffi', '1.9.25'
+  gem 'capybara', '3.5.1'
   gem 'cucumber'
   gem 'rake'
   gem 'selenium-webdriver'
-  gem 'site_prism'
+  gem 'site_prism', '~> 2.17', '>= 2.17.1'
   gem 'rspec'
   gem 'syntax'
   gem 'poltergeist'
