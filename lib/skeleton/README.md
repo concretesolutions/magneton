@@ -80,7 +80,7 @@ Install and include in PATH
 - [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
 
 - Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
-- Install [Allure Report](https://docs.qameta.io/allure/)
+- Install [Allure Report](https://docs.qameta.io/allure/#_installation_11)
 
 
 ### Run tests in DEV with Chrome ###

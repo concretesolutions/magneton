@@ -27,7 +27,8 @@ class Cucumber::Core::Test::Step
  end
 
  AllureCucumber.configure do |c|
-  # c.output_dir = "reports"
+  #Generate the XML in the reports directory and not in the allure pattern
+  c.output_dir = "reports"
   c.clean_dir  = false
   c.tms_prefix      = '@TMS:'
   c.issue_prefix    = '@ISSUE:'
