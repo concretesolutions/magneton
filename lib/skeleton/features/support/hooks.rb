@@ -23,6 +23,8 @@ After do |scenario|
   ## take screenshot if scenario fail
   if scenario.failed?
     @helper.take_screenshot(scenario.name, 'screenshots/test_failed')
+    include AllureCucumber::DSL
+    embed(File.open("screenshots/test_failed/" + scenario.name + ".png"),'image/png', scenario.name + ".png")
   end
 end
 

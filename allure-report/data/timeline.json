@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "WKSJUN000245",
+    "children" : [ {
+      "name" : "23752960",
+      "children" : [ {
+        "name" : "First Scenario",
+        "uid" : "e2b0e760f80bec97",
+        "parentUid" : "0135fb497a4334ba517c5615c5d295a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1538654976279,
+          "stop" : 1538654989754,
+          "duration" : 13475
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0135fb497a4334ba517c5615c5d295a7"
+    } ],
+    "uid" : "34d4abcef3e765fa37a35cbf7832b6ac"
+  } ]
+}

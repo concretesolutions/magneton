@@ -12,9 +12,27 @@ require 'imatcher'
 require 'chunky_png'
 require 'os'
 require 'headless'
+require 'allure-cucumber'
 
 BROWSER = ENV['BROWSER']
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
+
+## Configure Allure
+class Cucumber::Core::Test::Step
+  def name
+    return text if self.text == 'Before hook'
+    return text if self.text == 'After hook'
+    "#{source.last.keyword}#{text}"
+  end
+ end
+
+ AllureCucumber.configure do |c|
+  # c.output_dir = "reports"
+  c.clean_dir  = false
+  c.tms_prefix      = '@TMS:'
+  c.issue_prefix    = '@ISSUE:'
+  c.severity_prefix = '@SEVERITY:'
+end 
 
 ## register driver according with browser chosen
 Capybara.register_driver :selenium do |app|

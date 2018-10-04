@@ -80,6 +80,7 @@ Install and include in PATH
 - [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
 
 Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
+Install [Allure Report](https://docs.qameta.io/allure/)
 
 
 ### Run tests in DEV with Chrome ###
@@ -128,3 +129,23 @@ Type this in the tests folder:
 ```shell
 bundle exec cucumber --tags @run
 ```
+
+### Allure Report ###
+In the cucumber.yml file change the value of html_report
+```shell
+html_report: --format AllureCucumber::Formatter --out
+```
+To generate the report from existing Allure results you can use the following command:
+```shell
+allure generate <directory-with-results>
+```
+The report will be generated to allure-report folder. You can change the destination folder using -o flag:
+```shell
+allure generate <directory-with-results> -o <directory-with-report>
+```
+
+The report will be generated to allure-report folder. You can change the destination folder using -o flag:
+```shell
+allure open <directory-with-report>
+```
+More information read item 13.1.2 of the [Allure documentation](https://docs.qameta.io/allure/#_configuration_3)

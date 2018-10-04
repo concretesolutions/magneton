@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Search",
+    "children" : [ {
+      "name" : "First Scenario",
+      "uid" : "e2b0e760f80bec97",
+      "parentUid" : "675ca121bcc397335451f5310d3f2131",
+      "status" : "failed",
+      "time" : {
+        "start" : 1538654976279,
+        "stop" : 1538654989754,
+        "duration" : 13475
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "675ca121bcc397335451f5310d3f2131"
+  } ]
+}

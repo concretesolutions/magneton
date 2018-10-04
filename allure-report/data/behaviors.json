@@ -1,0 +1,25 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Search",
+    "children" : [ {
+      "name" : "First Scenario",
+      "children" : [ {
+        "name" : "First Scenario",
+        "uid" : "e2b0e760f80bec97",
+        "parentUid" : "42857e709b9d65716b00e74d425b8121",
+        "status" : "failed",
+        "time" : {
+          "start" : 1538654976279,
+          "stop" : 1538654989754,
+          "duration" : 13475
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "42857e709b9d65716b00e74d425b8121"
+    } ],
+    "uid" : "b4c391a54a6b5af78881245cab8481cb"
+  } ]
+}

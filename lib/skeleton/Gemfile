@@ -18,4 +18,6 @@ group :test do
   gem 'pry'
   gem 'pry-byebug'
   gem 'headless'
+  gem 'allure-cucumber'
+  gem 'allure-ruby-adaptor-api'
 end
