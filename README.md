@@ -114,6 +114,7 @@ You can create the baseline_images if you include the tag `@create_baseline_imag
 You can crop a screenshot around element, just only use  `take_screenshot_and_crop` method:
 `take_screenshot_and_crop(name_file, folder_to_save, css_selector)`
 
+
 ## TODO
 
 1. Run tests in Remote Server
